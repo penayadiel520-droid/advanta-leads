@@ -502,6 +502,125 @@ body.board-mode .wrap{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px)
 .toast .tbtns button{height:28px;padding:0 10px;border-radius:8px;border:1px solid var(--line3);background:var(--surface3);font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;transition:border-color .15s,color .15s}
 .toast .tbtns button:hover{border-color:var(--accent-line);color:#cfe0ff}
 
+/* ---------- home (command center) ---------- */
+.tabs button svg{vertical-align:-3px}
+.h-hello{display:flex;align-items:flex-end;gap:14px 16px;flex-wrap:wrap;margin-bottom:18px}
+.h-hi{min-width:0}
+.h-hi h2{margin:0;font:800 28px/1.15 var(--fd);letter-spacing:-.02em}
+.h-hi p{margin:5px 0 0;color:var(--muted)}
+.h-hi p b{color:var(--text);font-weight:700}
+.h-cta{margin-left:auto;display:flex;gap:8px}
+.h-cta .btn{min-height:44px;padding:0 18px;font-size:14px;border-radius:12px}
+.h-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ht{position:relative;min-width:0;padding:16px 18px 18px;border-radius:18px;background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--line);box-shadow:0 20px 50px -34px rgba(0,0,0,.7)}
+.ht h3{display:flex;align-items:center;gap:8px;min-height:26px;margin:0 0 10px;font:700 11.5px/1.3 var(--fb);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.ht h3 i{width:8px;height:8px;border-radius:50%;flex:none;background:var(--c,var(--accent));box-shadow:0 0 0 3px color-mix(in srgb,var(--c,var(--accent)) 20%,transparent)}
+.ht h3 .hs{margin-left:auto;display:flex;align-items:center;gap:6px;min-width:0;font-size:12px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.h-next{grid-column:span 2;grid-row:span 2}
+.h-pipe,.h-pins{grid-column:span 2}
+.hn{display:grid;grid-template-columns:72px minmax(0,1fr) auto;align-items:center;gap:12px;margin:0 -8px;padding:10px 8px;border-radius:11px;cursor:pointer;transition:background .15s}
+.hn+.hn{box-shadow:inset 0 1px 0 var(--line)}
+.hn:hover{background:rgba(91,147,255,.06)}
+.hn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.hn-w{font:800 14.5px/1.2 var(--fd);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--warn)}
+.hn-w.late{color:var(--bad)}
+.hn-b{min-width:0}
+.hn-b b{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hn-b small{display:block;margin-top:1px;color:var(--dim);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hcall{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 13px;border-radius:10px;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.3);color:#86efc1;font-weight:700;font-size:13px;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.hcall:hover{background:rgba(52,211,153,.2);border-color:rgba(52,211,153,.55);color:#a7f3d0}
+.h-all{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;margin-top:12px;border-radius:10px;border:1px dashed var(--line3);color:var(--muted);font-weight:600;font-size:13px;transition:border-color .15s,color .15s,background .15s}
+.h-all:hover{color:var(--text);border-color:var(--accent-line);background:var(--surface2)}
+.hbig{display:flex;align-items:baseline;gap:6px;font:800 48px/1 var(--fd);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--text)}
+.hbig small{font-size:17px;font-weight:700;letter-spacing:0;color:var(--dim)}
+button.hbig{text-align:left;border-radius:10px}
+button.hbig:hover{filter:brightness(1.15)}
+.hbig.bad{color:#fca5a5}
+.hbig.good{color:#7ee7bf}
+.hsub{margin-top:8px;color:var(--muted);font-size:13px}
+.h-calls .hsub{padding-right:86px}
+.hlink{display:inline-flex;align-items:center;gap:4px;margin-top:14px;font-size:12.5px;font-weight:600;color:var(--accent-2);border-radius:6px}
+.hlink:hover{color:#cfe0ff}
+.hring{position:absolute;right:16px;bottom:16px;width:80px;height:80px}
+.hring .bg{stroke:var(--line2)}
+.hring .fg{stroke:var(--accent)}
+.hring.done .fg{stroke:var(--good)}
+.hgoal select{height:26px;padding:0 22px 0 8px;border-radius:7px;border:1px solid var(--line2);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239aa7c6' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 6px center;font:600 12px/1 var(--fb);color:var(--text);-webkit-appearance:none;appearance:none;cursor:pointer;outline:none}
+.hgoal select:hover{border-color:var(--line3)}
+.hgoal select:focus-visible{border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,147,255,.25)}
+.hgoal select option{background:var(--surface2);color:var(--text)}
+.hchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.hchips button{display:inline-flex;align-items:center;height:28px;padding:0 10px;border-radius:99px;font-size:12px;font-weight:600;white-space:nowrap;background:color-mix(in srgb,var(--c) 14%,transparent);color:color-mix(in srgb,var(--c) 78%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 26%,transparent);transition:background .15s}
+.hchips button:hover{background:color-mix(in srgb,var(--c) 24%,transparent)}
+.hm{display:block;margin:-4px -8px 0;padding:4px 8px 6px;border-radius:11px;cursor:pointer;transition:background .15s}
+.hm:hover{background:rgba(52,211,153,.06)}
+.hm:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.hm-t{font:800 23px/1.2 var(--fd);color:#6ee7b7;font-variant-numeric:tabular-nums}
+.hm-n{display:block;margin-top:6px;font:700 16px/1.3 var(--fd);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hm-s{display:block;margin-top:2px;color:var(--dim);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hm-a{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.h-fresh{background:linear-gradient(135deg,#1d3d94,#0f1d47 75%);border-color:#2d4ea8}
+.h-fresh h3{color:#c9d6ff}
+.h-fresh .hbig{color:#fff}
+.h-fresh p{margin:8px 0 14px;color:#c9d6ff;font-size:13px}
+.hbars{display:flex;flex-direction:column;gap:2px}
+.hbar{display:grid;grid-template-columns:120px minmax(0,1fr) 48px;align-items:center;gap:10px;width:calc(100% + 16px);margin:0 -8px;padding:5px 8px;border-radius:9px;font-size:13px;color:var(--muted);text-align:left;transition:background .15s,color .15s}
+.hbar:hover{background:rgba(91,147,255,.06);color:var(--text)}
+.hb-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hb-t{height:9px;border-radius:99px;background:var(--line);overflow:hidden}
+.hb-t b{display:block;height:100%;border-radius:inherit;background:var(--c);transition:width .4s var(--ease)}
+.hbar em{font-style:normal;text-align:right;font-weight:700;color:var(--text);font-variant-numeric:tabular-nums}
+.hpins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hp{display:flex;flex-direction:column;gap:7px;min-width:0;padding:10px 10px 11px 12px;border-radius:12px;background:rgba(251,191,36,.055);border:1px solid rgba(251,191,36,.22);cursor:pointer;transition:border-color .15s,background .15s}
+.hp:hover{border-color:rgba(251,191,36,.45);background:rgba(251,191,36,.09)}
+.hp:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.hp-top{display:flex;align-items:flex-start;gap:8px}
+.hp-top b{flex:1;min-width:0;padding-top:4px;font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hp-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hp-meta .pill{height:22px;font-size:11px}
+.hp-meta .due{font-size:12px}
+.hp-note{margin:0;font-size:13px;line-height:1.5;color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.hp-note.none{color:var(--dim)}
+.hp-note a{color:var(--accent-2);text-decoration:underline;text-underline-offset:2px}
+.hempty{padding:18px 14px;border:1px dashed var(--line2);border-radius:12px;text-align:center;color:var(--dim);font-size:13px;line-height:1.55}
+.hempty.sm{padding:14px 12px;font-size:12.5px}
+.hempty b{display:block;margin-bottom:3px;font:700 15px var(--fd);color:var(--text)}
+.hempty.sm b{display:inline;font:600 12.5px var(--fb);color:var(--muted);margin:0}
+.hsk{display:grid;gap:11px;padding:4px 0}
+.hsk i{display:block;height:11px;border-radius:99px;background:linear-gradient(90deg,var(--surface2),var(--surface3),var(--surface2));background-size:200% 100%;animation:shimmer 1.4s linear infinite}
+.col.hl{border-color:color-mix(in srgb,var(--c) 80%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--c) 55%,transparent),0 16px 36px -18px color-mix(in srgb,var(--c) 85%,transparent)}
+/* calling session bar at the top of the lead panel */
+.sess{display:flex;align-items:center;gap:6px;margin:0 0 12px;padding:6px 6px 6px 12px;border-radius:12px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.sess-l{flex:1;min-width:0;font-size:12.5px;color:#cfe0ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sess-l svg{color:var(--accent-2);vertical-align:-2px}
+.sess-l b{color:#fff;font-weight:700}
+@media (max-width:1100px){
+  .h-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .h-next,.h-pipe,.h-pins{grid-column:1/-1}
+  .h-next{grid-row:auto}
+}
+@media (max-width:760px){
+  .tabs button[data-tab="home"]{flex:0 0 auto}
+  .h-hello{margin-bottom:14px}
+  .h-hi h2{font-size:23px}
+  .h-cta{margin-left:0;width:100%}
+  .h-cta .btn{flex:1}
+  .h-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .ht{padding:14px 16px 16px;border-radius:16px}
+  .hn{grid-template-columns:62px minmax(0,1fr) auto;gap:10px}
+  .hcall{height:40px}
+  .hbig{font-size:42px}
+  .hring{width:72px;height:72px}
+  .h-calls .hsub{padding-right:78px}
+  .hpins{grid-template-columns:minmax(0,1fr)}
+  .hbar{grid-template-columns:104px minmax(0,1fr) 44px;padding:7px 8px}
+}
+@media (max-width:560px){
+  .sess{flex-wrap:wrap;padding:8px}
+  .sess-l{flex:1 1 100%;padding:0 4px 2px}
+  .sess .btn{flex:1}
+}
+
 /* ---------- responsive ---------- */
 @media (min-width:1101px){
   .tools{position:sticky;top:var(--hh);z-index:20;margin-inline:-8px;padding:8px;border-radius:14px;background:rgba(6,11,22,.8);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
@@ -643,7 +762,8 @@ body.board-mode .wrap{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px)
       <div><h1>AdVanta Leads</h1><small>Exterior cleaning call pipeline</small></div>
     </div>
     <div class="tabs" id="tabs" role="group" aria-label="Page">
-      <button type="button" data-tab="board" class="on" aria-pressed="true">Pipeline</button>
+      <button type="button" data-tab="home" aria-pressed="false" aria-label="Home"><svg class="xs" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7"/><path d="M5.5 9v10.5a1 1 0 0 0 1 1H10V15h4v5.5h3.5a1 1 0 0 0 1-1V9"/></svg><span class="xl">Home</span></button>
+      <button type="button" data-tab="board" aria-pressed="false">Pipeline</button>
       <button type="button" data-tab="leads" aria-pressed="false">Call list</button>
       <button type="button" data-tab="calls" aria-pressed="false"><span class="xl">Call stats</span><span class="xs">Stats</span></button>
     </div>
@@ -660,6 +780,25 @@ body.board-mode .wrap{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px)
 
 <main class="wrap" id="app">
   <div id="notice" hidden></div>
+
+  <section id="homeView" class="home" aria-label="Home" hidden>
+    <div class="h-hello">
+      <div class="h-hi"><h2 id="hHi">Welcome back</h2><p id="hSub"></p></div>
+      <div class="h-cta">
+        <button type="button" class="btn" id="hAdd"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Add lead</button>
+        <button type="button" class="btn primary" id="hStart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Start calling</button>
+      </div>
+    </div>
+    <div class="h-grid">
+      <section class="ht h-next" aria-labelledby="hNextT"><h3><i style="--c:var(--warn)"></i><span id="hNextT">Up next</span><span class="hs" id="hNextS"></span></h3><div id="hNextL"></div></section>
+      <section class="ht h-calls" aria-labelledby="hCallsT"><h3><i></i><span id="hCallsT">Calls today</span><label class="hs hgoal">Goal <select id="hGoal" aria-label="Daily call goal"></select></label></h3><div id="hCallsB"></div></section>
+      <section class="ht h-over" aria-labelledby="hOverT"><h3><i style="--c:var(--bad)"></i><span id="hOverT">Overdue</span></h3><div id="hOverB"></div></section>
+      <section class="ht h-meet" aria-labelledby="hMeetT"><h3><i style="--c:var(--good)"></i><span id="hMeetT">Next meeting</span><span class="hs" id="hMeetS"></span></h3><div id="hMeetB"></div></section>
+      <section class="ht h-fresh" aria-labelledby="hFreshT"><h3><span id="hFreshT">Fresh leads</span></h3><div id="hFreshB"></div></section>
+      <section class="ht h-pipe" aria-labelledby="hPipeT"><h3><i></i><span id="hPipeT">Your pipeline</span><span class="hs">Tap a stage to open it</span></h3><div class="hbars" id="hPipeB"></div></section>
+      <section class="ht h-pins" aria-labelledby="hPinsT"><h3><i style="--c:var(--warn)"></i><span id="hPinsT">Pinned notes</span><span class="hs" id="hPinsS"></span></h3><div id="hPinsB"></div></section>
+    </div>
+  </section>
 
   <section id="callsView" hidden>
     <div class="cs-bar">
@@ -801,8 +940,10 @@ const addDays=n=>{const d=new Date();d.setDate(d.getDate()+n);d.setMinutes(d.get
 const fmtShort=d=>new Date(d+'T12:00').toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
 const dayDiff=ds=>Math.round((new Date(ds)-new Date(todayStr()))/864e5);
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-// Page tab: 'board' (pipeline), 'leads' (call list) or 'calls' (stats). The last of the first two is remembered.
-let tab=['board','leads'].includes(store.get('advanta_tab'))?store.get('advanta_tab'):'board';
+// Page tab: 'home' (your day), 'board' (pipeline), 'leads' (call list) or 'calls' (stats). The first visit each
+// day opens on Home; after that the page comes back to whichever of the first three you used last.
+let tab=store.get('advanta_day')!==todayStr()?'home':['home','board','leads'].includes(store.get('advanta_tab'))?store.get('advanta_tab'):'home';
+store.set('advanta_day',todayStr());
 
 /* ---------- icons ---------- */
 const I=(p,s=16,w=2)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
@@ -1152,7 +1293,7 @@ function renderFilters(){
 }
 function renderMe(){document.querySelectorAll('#me button').forEach(b=>{const on=b.dataset.me===me;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)})}
 function renderMain(){ if(tab==='board') renderBoard(); else if(tab==='leads') renderTable(); }
-function render(){ if(tab!=='calls') renderPins(); if(tab==='leads'){renderStats();renderMeetings();renderChips();} renderMain(); if(openId!=null)renderDrawer(); }
+function render(){ if(tab==='home') renderHome(); else if(tab!=='calls') renderPins(); if(tab==='leads'){renderStats();renderMeetings();renderChips();} renderMain(); if(openId!=null)renderDrawer(); }
 
 /* ---------- pipeline board ---------- */
 // One column per step of the pipeline. Dropping a card on a column logs that outcome exactly like
@@ -1376,6 +1517,11 @@ function syncLayers(){
 let leadReturn=null;
 function openerSel(el){
   if(!el||!el.closest) return null;
+  if(el.closest('#homeView')){
+    const o=el.closest('[data-open]'); if(!o) return el.id?'#'+CSS.escape(el.id):null;
+    const box=o.parentElement&&o.parentElement.closest('[id]');
+    return `${box?'#'+CSS.escape(box.id)+' ':''}[data-open="${o.dataset.open}"]`;
+  }
   const pc=el.closest('.pc[data-id]'); if(pc) return `#pins .pc[data-id="${pc.dataset.id}"]`;
   const c=el.closest('.card[data-id]'); if(c) return `.card[data-id="${c.dataset.id}"]`;
   const r=el.closest('.row[data-id]'); if(r) return `.row[data-id="${r.dataset.id}"]`;
@@ -1401,9 +1547,10 @@ function mergeActs(id,rows){
 function saveDraft(){ const t=$('#noteTxt'); if(t&&drawerFor!=null) drafts[drawerFor]=t.value; }
 function closeLead(){
   if(openId==null) return;
+  sess=null;
   saveDraft(); const id=openId;
   openId=null; $('#drawer').classList.remove('on'); $('#scrim').classList.remove('on'); syncLayers(); renderMain();
-  const back=[leadReturn&&$(leadReturn),$(`${tab==='board'?'.card':'.row'}[data-id="${id}"]`)].find(el=>el&&el.offsetParent!==null);
+  const back=[leadReturn&&$(leadReturn),$(`${tab==='board'?'.card':'.row'}[data-id="${id}"]`),tab==='home'&&$('#hStart')].find(el=>el&&el.offsetParent!==null);
   leadReturn=null;
   if(back){
     back.focus({preventScroll:true});
@@ -1445,7 +1592,7 @@ function focusKey(el){
 }
 function headHtml(l){
   const list=l.batch_date?' · List of '+new Date(l.batch_date+'T12:00').toLocaleDateString(undefined,{month:'short',day:'numeric'}):'';
-  return `<div class="eyebrow">#${l.id}${esc(list)}</div>
+  return `${sessHtml()}<div class="eyebrow">#${l.id}${esc(list)}</div>
     <div class="t"><h2 id="dTitle">${esc(l.name)}</h2><button type="button" class="x pinx${l.pinned_at?' on':''}" id="pinD" data-pin="${l.id}" aria-pressed="${!!l.pinned_at}" title="${l.pinned_at?'Unpin':'Pin to the top of the page'}" aria-label="${l.pinned_at?'Unpin this lead':'Pin this lead'}">${I(P.tack,16,2.1)}</button><button type="button" class="x" id="closeD" aria-label="Close">${I(P.x,16,2.2)}</button></div>
     <div class="meta">
       ${pill(l.status)}
@@ -1522,7 +1669,7 @@ async function patchLead(id, fields){
 async function logAct(id, kind, status, note){
   try{
     const rows=await rest('crm_activity',{method:'POST',body:{lead_id:int(id),kind,status:status||null,note:note||null,created_by:me},prefer:'return=representation'});
-    if(rows[0]){ acts[id]=[{...rows[0],_local:true},...(acts[id]||[])]; if(openId===id) renderDrawer(); }
+    if(rows[0]){ acts[id]=[{...rows[0],_local:true},...(acts[id]||[])]; if(openId===id) renderDrawer(); homeNote(rows[0]); }
   }catch(e){}
 }
 // Most recent call-type event on a lead: loaded activity plus taps/outcomes made on this page
@@ -1653,7 +1800,7 @@ function load(){
       if(sig!==leadsSig||!leads.length){
         leadsSig=sig; leads=rows.map(normLead);
         renderFilters(); render(); tickTimed();
-      } else renderMeetings();   // nothing changed: leave the page (and anything you're typing) alone
+      } else { renderMeetings(); if(tab==='home') renderHome(); }   // nothing changed: leave the page (and anything you're typing) alone
       if(!leads.length) $('#table').innerHTML=emptyHtml('No leads yet','The daily lead run adds 100 here every morning.');
     }catch(e){
       showNotice(e.code, e.message);
@@ -1947,6 +2094,12 @@ document.addEventListener('click',e=>{
   const tmb=e.target.closest('[data-tm]'); if(tmb){tmPick={id:openId,m:+tmb.dataset.tm};renderDrawer();return}
   const callA=e.target.closest('[data-call]'); if(callA){logCall(+callA.dataset.call);return}
   const textA=e.target.closest('[data-text]'); if(textA){logText(+textA.dataset.text);return}
+  if(e.target.closest('#hStart')){startSession('due');return}
+  if(e.target.closest('#hFreshGo')){startSession('new');return}
+  if(e.target.closest('#hAdd')){openAdd();return}
+  if(e.target.closest('#sessNext')){sessNext();return}
+  if(e.target.closest('#sessEnd')){sess=null;renderDrawer();$('#drawer').focus({preventScroll:true});return}
+  const hg=e.target.closest('[data-hgo]'); if(hg){homeGo(hg.dataset.hgo);return}
   if(e.target.closest('[data-stop]')) return;
   const st=e.target.closest('.stat'); if(st){view=st.dataset.v;statusF='';render();return}
   const ch=e.target.closest('.chip'); if(ch){statusF=ch.dataset.s;render();return}
@@ -2000,7 +2153,7 @@ document.addEventListener('keydown',e=>{
     const t=e.target, typing=t&&t.closest&&t.closest('input,textarea,select,[contenteditable=""],[contenteditable="true"]');
     if(typing||isOn('#meetModal')||isOn('#modal')) return;
     e.preventDefault();
-    if(tab==='calls') setTab(store.get('advanta_tab')==='leads'?'leads':'board');
+    if(tab==='calls'||tab==='home') setTab(store.get('advanta_tab')==='leads'?'leads':'board');
     if(openId!=null) closeLead();
     const q=$('#q'); q.focus(); q.select();
   }
@@ -2015,6 +2168,7 @@ document.addEventListener('input',e=>{
 document.addEventListener('change',e=>{
   if(e.target.id==='fuDate'){patchLead(openId,{follow_up_date:e.target.value||null,follow_up_at:null,updated_by:me}).then(ok=>ok&&toast('Follow-up updated'))}
   if(e.target.id==='repSel'){const r=e.target.value,id=openId;patchLead(id,{rep:r,updated_by:me}).then(ok=>{if(ok){logAct(id,'Reassigned to '+r,null,'');toast('Assigned to '+r)}})}
+  if(e.target.id==='hGoal'){store.set('advanta_goal_'+me,e.target.value);renderHome();}
   if(['repF','cityF','batchF','sortF'].includes(e.target.id)) render();
   if(e.target.id==='mtLink') saveMeetLink(e.target.value);
   if(e.target.id==='mtPhone'&&MT&&MT.step===1) MT.phone=e.target.value.trim();
@@ -2166,18 +2320,194 @@ async function loadCalls(){
     csLoadedAt=Date.now(); renderCalls();
   }catch(e){ if(callRows==null){ $('#csChart').innerHTML=emptyHtml('Calls aren’t loaded','See the message above, then press Refresh.',P.alert); } showNotice(e.code,e.message); }
 }
+/* ---------- home (command center) ---------- */
+// Your day on one screen: what to call next, calls made against your goal, overdue follow-ups, your next
+// meeting, new leads, your pipeline and pinned notes. It only counts your own leads (the name picked at
+// the top). "Start calling" walks your list in the side panel, one lead at a time.
+const GOALS=[20,30,40,50,60,75,100];
+const homeGoal=()=>{ const g=+store.get('advanta_goal_'+me); return GOALS.includes(g)?g:50; };
+$('#hGoal').innerHTML=GOALS.map(g=>`<option value="${g}">${g}</option>`).join('');
+let homeRaw=null, homeDay='', homeAt=0, homeTry=0, homeErr=false, homeP=null, sess=null;
+// Today's call-type activity, by New York day like Call stats, and counted the same way.
+function loadHomeCalls(){
+  if(homeP) return homeP;
+  homeTry=Date.now();
+  homeP=(async()=>{
+    const day=nyToday(), from=zonedToUtc(day,'00:00','America/New_York').getTime();
+    try{
+      const filter='or=(status.in.('+CALL_STATUSES.join(',')+'),kind.eq.Called)';
+      const rows=await restAll(`crm_activity?select=id,lead_id,created_at,created_by,kind,status&${filter}&created_at=gte.${encodeURIComponent(new Date(from).toISOString())}&order=id`);
+      homeRaw=rows.filter(r=>Date.parse(r.created_at)>=from); homeDay=day; homeAt=Date.now(); homeErr=false;
+    }catch(e){ homeErr=true; }
+    finally{ homeP=null; if(tab==='home') renderHome(); }
+  })();
+  return homeP;
+}
+// A row this page just logged counts right away; the next refresh confirms it.
+function homeNote(row){
+  if(!homeRaw||!row||homeDay!==nyToday()||!(row.kind==='Called'||CALL_STATUSES.includes(row.status))) return;
+  if(!homeRaw.some(r=>String(r.id)===String(row.id))) homeRaw.push(row);
+  if(tab==='home') renderHome();
+}
+function homeToday(){
+  if(homeDay!==nyToday()){ if(!homeP&&Date.now()-homeTry>20000) loadHomeCalls(); return null; }
+  const mine=r=>(r.created_by||'')===me, counted=countedCalls(homeRaw).filter(mine);
+  return {calls:counted.length, reached:counted.filter(r=>REACHED.includes(r.kind)).length,
+    booked:new Set(homeRaw.filter(r=>mine(r)&&r.status==='booked').map(r=>r.lead_id)).size};
+}
+setInterval(()=>{ if(tab==='home'&&!document.hidden&&!saving&&Date.now()-homeAt>45000) loadHomeCalls(); },15000);
+
+// Your calling order, same as Call today: callbacks whose time has come, overdue follow-ups, today's, then
+// new leads. A callback set for later today waits for its time (its reminder pops up then).
+function homeQueue(kind){
+  const t=todayStr(), now=Date.now(), mine=leads.filter(l=>l.rep===me&&!CLOSED.includes(l.status));
+  if(kind==='new'){ const q=mine.filter(l=>l.status==='new').sort((a,b)=>a.id-b.id); q.nDue=0; return q; }
+  const g={now:[],over:[],today:[],fresh:[]};
+  mine.forEach(l=>{
+    const at=timedAt(l);
+    if(at!=null){ if(at<=now) g.now.push(l); return; }
+    if(l.follow_up_date&&l.follow_up_date<t) g.over.push(l);
+    else if(l.follow_up_date===t) g.today.push(l);
+    else if(l.status==='new') g.fresh.push(l);
+  });
+  g.now.sort((a,b)=>dueRank(a)-dueRank(b)||a.id-b.id); g.over.sort((a,b)=>dueRank(a)-dueRank(b)||a.id-b.id);
+  g.today.sort((a,b)=>a.id-b.id); g.fresh.sort((a,b)=>a.id-b.id);
+  const q=[...g.now,...g.over,...g.today,...g.fresh]; q.nDue=q.length-g.fresh.length;
+  return q;
+}
+function startSession(kind){
+  if(!lastSync&&!leads.length){ toast('Still loading your leads…','info'); return; }
+  const q=homeQueue(kind);
+  if(!q.length){ toast(kind==='new'?'No new leads right now':'Nothing due right now. Nice work','info'); return; }
+  sess={kind,seen:new Set([q[0].id])};
+  openLead(q[0].id);
+}
+// The next lead in the list that hasn't come up yet this session.
+function sessNext(){
+  if(!sess) return;
+  if(openId!=null) sess.seen.add(openId);     // a lead opened by hand mid-session counts as done too
+  const next=homeQueue(sess.kind).find(l=>!sess.seen.has(l.id));
+  if(!next){ const n=sess.seen.size; closeLead(); toast(`That’s everyone · ${n} lead${n>1?'s':''} this round`); return; }
+  sess.seen.add(next.id); openLead(next.id);
+}
+function sessHtml(){
+  if(!sess) return '';
+  const q=homeQueue(sess.kind), un=l=>!sess.seen.has(l.id)&&l.id!==openId;
+  const dueLeft=q.slice(0,q.nDue).filter(un).length, newLeft=q.slice(q.nDue).filter(un).length, left=dueLeft+newLeft;
+  const tail=dueLeft?`${dueLeft} due${newLeft?`, then ${newLeft} new`:''}`:newLeft?`${newLeft} ${sess.kind==='new'?'':'new '}to go`:'last one';
+  return `<div class="sess" role="group" aria-label="Calling session"><span class="sess-l">${I(P.phone,13,2.2)} <b>${sess.kind==='new'?'New leads':'Calling'}</b> · lead ${sess.seen.size} · ${tail}</span><button type="button" class="btn sm primary" id="sessNext">${left?'Next lead':'Finish'}${I(P.chev,13,2.6)}</button><button type="button" class="btn sm ghost" id="sessEnd">Stop</button></div>`;
+}
+// Tiles open the matching list with only your leads in it, so the numbers line up.
+function homeGo(where){
+  const [k,arg]=String(where).split(':');
+  if(k==='calls'){ setTab('calls'); return; }
+  $('#repF').value='mine'; $('#cityF').value=''; $('#batchF').value='';
+  const q=$('#q'); if(q.value){ q.value=''; $('#searchBox').classList.remove('has'); $('#qClear').hidden=true; }
+  if(k==='stage'||k==='pins'){
+    if(arg==='closed'&&!colOpen.closed){ colOpen.closed=true; store.set('advanta_closed_open','1'); }
+    if(k==='pins'&&!pinsOpen){ pinsOpen=true; store.set('advanta_pins_open','1'); }
+    setTab('board'); scrollTo(0,0);
+    const c=k==='stage'&&$(`.col[data-stage="${CSS.escape(arg||'')}"]`);
+    if(c){ c.scrollIntoView({block:'nearest',inline:'start',behavior:'smooth'}); c.classList.add('hl'); setTimeout(()=>c.classList.remove('hl'),1800); }
+    return;
+  }
+  view=k==='followups'?'followups':'today'; statusF=k==='followups'&&S[arg]?arg:'';
+  setTab('leads'); scrollTo(0,0);
+  if(k==='meets'){ const m=$('#meets'); if(m&&!m.hidden) m.scrollIntoView({block:'nearest'}); }
+}
+// setHTML that keeps keyboard focus on the same control when a tile re-renders.
+function hSet(sel,html){
+  const el=$(sel); if(!el) return;
+  const a=document.activeElement; let key=null;
+  if(a&&a!==el&&el.contains(a)){
+    for(const k of ['open','call','pin','hgo']) if(a.dataset&&a.dataset[k]!=null){ key=`[data-${k}="${CSS.escape(a.dataset[k])}"]`; break; }
+    if(!key&&a.id) key='#'+CSS.escape(a.id);
+  }
+  if(setHTML(el,html)&&key){ const n=el.querySelector(key); if(n) n.focus({preventScroll:true}); }
+}
+function hRow(l,when,cls,sub){
+  const more=[sub,l.last_note||l.city||''].filter(Boolean).join(' · ');
+  return `<div class="hn" data-open="${l.id}" role="button" tabindex="0" aria-label="Open ${esc(l.name)}">
+    <span class="hn-w ${cls}">${esc(when)}</span>
+    <div class="hn-b"><b>${l.pinned_at?`<i class="pinmark" title="Pinned">${I(P.tack,12,2.2)}</i>`:''}${esc(l.name)}</b><small>${esc(more)}</small></div>
+    <a class="hcall" href="tel:${esc(telOf(l.phone))}" data-call="${l.id}" aria-label="Call ${esc(l.name)}">${I(P.phone,14,2.2)}<span>Call</span></a></div>`;
+}
+function hPin(l){
+  const due=upcoming(l)||(!CLOSED.includes(l.status)&&l.follow_up_date)?fmtDue(l):'';
+  const note=l.last_note?linkify(l.last_note).replace(/<a /g,'<a data-stop '):'';
+  return `<div class="hp" data-open="${l.id}" role="button" tabindex="0" aria-label="Open ${esc(l.name)}"><div class="hp-top"><b>${esc(l.name)}</b>${pinBtn(l)}</div><div class="hp-meta">${pill(l.status)}${due}</div><p class="hp-note${note?'':' none'}">${note||'No notes yet.'}</p></div>`;
+}
+const HSK='<div class="hsk" aria-hidden="true"><i style="width:70%"></i><i style="width:46%"></i><i style="width:58%"></i></div>';
+function renderHome(){
+  if(tab!=='home') return;
+  const st=homeToday(), goal=homeGoal(), hr=new Date().getHours();
+  hSet('#hHi',`Good ${hr<12?'morning':hr<17?'afternoon':'evening'}, ${esc(me)}`);
+  hSet('#hSub',esc(new Date().toLocaleDateString(undefined,{weekday:'long',month:'short',day:'numeric'}))+(st?` · you’ve made <b>${st.calls}</b> of ${goal} calls today`:''));
+  const gs=$('#hGoal'); if(gs.value!==String(goal)) gs.value=String(goal);
+  const pct=st?Math.min(1,st.calls/goal):0, hit=!!st&&st.calls>=goal;
+  hSet('#hCallsB',`<div class="hbig">${st?st.calls:'–'}<small>/ ${goal}</small></div>
+    <div class="hsub">${st?`${hit?'Goal hit! ':''}${st.reached} reached · ${st.booked} booked`:homeErr?'Couldn’t load today’s calls.':'Counting today’s calls…'}</div>
+    <button type="button" class="hlink" data-hgo="calls">Call stats${I(P.chev,12,2.6)}</button>
+    <svg class="hring${hit?' done':''}" viewBox="0 0 36 36" aria-hidden="true"><circle class="bg" cx="18" cy="18" r="15.5" fill="none" stroke-width="3.6"/>${pct>0?`<circle class="fg" cx="18" cy="18" r="15.5" fill="none" stroke-width="3.6" stroke-linecap="round" pathLength="100" stroke-dasharray="${(pct*100).toFixed(1)} 100" transform="rotate(-90 18 18)"/>`:''}</svg>`);
+  if(!lastSync&&!leads.length){
+    hSet('#hNextL',syncErr?'<div class="hempty"><b>Leads aren’t loaded</b>See the message above.</div>':HSK);
+    ['#hOverB','#hMeetB','#hFreshB','#hPipeB','#hPinsB'].forEach(s=>hSet(s,syncErr?'':HSK));
+    ['#hNextS','#hMeetS','#hPinsS'].forEach(s=>hSet(s,''));
+    return;
+  }
+  const t=todayStr(), now=Date.now(), mine=leads.filter(l=>l.rep===me), live=mine.filter(l=>!CLOSED.includes(l.status));
+  // Up next: today's timed callbacks (by time), then overdue follow-ups (oldest first), then today's.
+  const timed=[], over=[], dueT=[];
+  live.forEach(l=>{
+    const at=timedAt(l);
+    if(at!=null){ if(l.follow_up_date===t) timed.push({l,at}); return; }
+    if(l.follow_up_date&&l.follow_up_date<t) over.push(l); else if(l.follow_up_date===t) dueT.push(l);
+  });
+  timed.sort((a,b)=>a.at-b.at||a.l.id-b.l.id); over.sort((a,b)=>dueRank(a)-dueRank(b)||a.id-b.id); dueT.sort((a,b)=>a.id-b.id);
+  const fresh=live.filter(l=>l.status==='new').length;
+  const rows=[...timed.map(({l,at})=>hRow(l,clockOf(at),at<=now?'late':'',relTime(at))),
+    ...over.map(l=>hRow(l,'Late','late',`${-dayDiff(l.follow_up_date)}d overdue`)),
+    ...dueT.map(l=>hRow(l,'Today','',(S[l.status]||S.new).label))];
+  hSet('#hNextS',[timed.length?`${timed.length} callback${timed.length>1?'s':''}`:'',over.length?`${over.length} overdue`:'',dueT.length?`${dueT.length} today`:''].filter(Boolean).join(' · '));
+  hSet('#hNextL',rows.length?rows.slice(0,5).join('')+`<button type="button" class="h-all" data-hgo="today">${rows.length>5?`See all ${rows.length} due in Call today`:'Open Call today'}${I(P.chev,13,2.6)}</button>`
+    :`<div class="hempty"><b>All caught up</b>No callbacks or follow-ups due right now.${fresh?` ${fresh} new lead${fresh>1?'s are':' is'} waiting for a first call.`:''}</div>`);
+  // overdue, by status
+  const byS={}; over.forEach(l=>byS[l.status]=(byS[l.status]||0)+1);
+  hSet('#hOverB',over.length?`<button type="button" class="hbig bad" data-hgo="followups" aria-label="Open your ${over.length} overdue follow-ups">${over.length}</button><div class="hsub">follow-up${over.length>1?'s':''} past their date</div><div class="hchips">${Object.entries(byS).sort((a,b)=>b[1]-a[1]).map(([k,n])=>`<button type="button" data-hgo="followups:${k}" style="--c:${(S[k]||S.new).c}">${n} ${esc((S[k]||S.new).label.toLowerCase())}</button>`).join('')}</div>`
+    :'<div class="hbig good">0</div><div class="hsub">Nothing overdue. Nice.</div>');
+  // next meeting
+  const meets=mine.filter(upcoming).map(l=>({l,t:Date.parse(l.meeting_at)})).sort((a,b)=>a.t-b.t);
+  hSet('#hMeetS',meets.length>1?`+${meets.length-1} more`:'');
+  if(meets.length){
+    const {l,t:mt}=meets[0], d=new Date(mt), rel=relMeet(mt);
+    const btns=(l.meeting_link?`<a class="btn sm good" href="${esc(siteHref(l.meeting_link))}" target="_blank" rel="noopener" data-stop>${I(P.video,14)}Join Meet</a>`:'')+(meets.length>1?`<button type="button" class="btn sm" data-hgo="meets">All ${meets.length} meetings</button>`:'');
+    hSet('#hMeetB',`<div class="hm" data-open="${l.id}" role="button" tabindex="0" aria-label="Open ${esc(l.name)}, meeting ${esc(meetShort(l.meeting_at))}"><div class="hm-t">${esc(dayWord(d))} ${esc(d.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'}))}</div><b class="hm-n">${esc(l.name)}</b><small class="hm-s">${esc([l.city,rel].filter(Boolean).join(' · ')||'Your time')}</small></div>${btns?`<div class="hm-a">${btns}</div>`:''}`);
+  } else hSet('#hMeetB','<div class="hempty sm">No meetings booked yet. When a lead says yes, press <b>Schedule meeting</b> in its panel.</div>');
+  // fresh leads
+  hSet('#hFreshB',`<div class="hbig">${fresh}</div><p>${fresh?`New business${fresh>1?'es':''} waiting for a first call.`:'No new leads right now. The daily run adds more each morning.'}</p>${fresh?`<button type="button" class="btn primary" id="hFreshGo">Start with new leads${I(P.chev,14,2.4)}</button>`:''}`);
+  // pipeline (square-root bars so the big New pile doesn't flatten everything else)
+  const by={}; STAGES.forEach(g=>by[g.k]=0); mine.forEach(l=>by[(STAGE_OF[l.status]||STAGES[0]).k]++);
+  const max=Math.max(1,...STAGES.map(g=>by[g.k]));
+  hSet('#hPipeB',STAGES.map(g=>{ const n=by[g.k]; return `<button type="button" class="hbar" data-hgo="stage:${g.k}" style="--c:${g.c}" aria-label="${esc(g.l)}: ${n}. Open it in Pipeline"><span class="hb-l">${esc(g.l)}</span><span class="hb-t"><b style="width:${n?Math.max(3,Math.round(Math.sqrt(n/max)*100)):0}%"></b></span><em>${n}</em></button>`; }).join(''));
+  // pinned notes, newest pin first
+  const pins=mine.filter(l=>l.pinned_at).sort((a,b)=>String(b.pinned_at).localeCompare(String(a.pinned_at))||a.id-b.id);
+  hSet('#hPinsS',pins.length?String(pins.length):'');
+  hSet('#hPinsB',pins.length?`<div class="hpins">${pins.slice(0,4).map(hPin).join('')}</div>${pins.length>4?`<button type="button" class="h-all" data-hgo="pins">See all ${pins.length} in Pipeline${I(P.chev,13,2.6)}</button>`:''}`
+    :'<div class="hempty sm">Pin a lead to keep its note here. Tap the pin on its card or in its panel.</div>');
+}
+
 function setTab(t){
   tab=t;
   if(t!=='calls') store.set('advanta_tab',t);
   document.querySelectorAll('#tabs button').forEach(b=>{const on=b.dataset.tab===t;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
   // Pipeline and Call list share the search + filters; the board just swaps out the stats, chips and table.
-  $('#leadsView').hidden=t==='calls'; $('#callsView').hidden=t!=='calls';
+  $('#leadsView').hidden=t==='calls'||t==='home'; $('#callsView').hidden=t!=='calls'; $('#homeView').hidden=t!=='home';
   $('#leadsView').classList.toggle('mode-board',t==='board');
   document.body.classList.toggle('board-mode',t==='board');
-  $('#addBtn').hidden=t==='calls';
+  $('#addBtn').hidden=t==='calls'||t==='home';
   closePick(false);
   if(t==='calls'){ if(!$('#csRep').dataset.set){$('#csRep').value='mine';$('#csRep').dataset.set='1'} renderCalls(); loadCalls(); }
-  else{ render(); syncBoardH(); }
+  else{ render(); syncBoardH(); if(t==='home'&&Date.now()-homeAt>15000) loadHomeCalls(); }
 }
 $('#tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setTab(b.dataset.tab)});
 $('#csPer').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;csPer=b.dataset.p;$('#csPer').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));renderCalls()});
